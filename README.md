@@ -1,12 +1,13 @@
+# Massseen
 Massseen is Instagram automation tool to view thousands of stories with in minutes without getting action block. 
 
-# Features
+## Features
 - View Stories
   
-# Uses 
+## Uses 
 - Increasing profile visits and followers
    
-# Installation
+## Installation
 
 Requires at least PHP version 5.6 to run.
 
@@ -18,7 +19,7 @@ $ php login.php
 $ php run.php
 ```
 
-# Credits
+## Credits
 Author credits : nthanfp
 
 Modified by mohsanjid
