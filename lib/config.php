@@ -10,7 +10,7 @@ Jika akun terkena feedback_required tenang, tinggal tunggu 24 jam ntar pulih lag
 
 //UBAH BAGIAN INI
 $countTarget    = '100'; //Ambil jumlah akun per target
-$sleep_1        = '3'; //Jeda per view story
+$sleep_1        = '6'; //Jeda per view story
 $sleep_2        = '30'; //Jeda per view story 1 akun user
 //SAMPAI SINI AJA
 
