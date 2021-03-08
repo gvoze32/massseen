@@ -13,10 +13,10 @@ echo "
 	$---------$--------$
 	
 	\n";
-echo " $$$$$$$$$$ Auto  Story Viewer by Photolooz $$$$$$$$$$$$$$$$$$   \n";
-echo "  $-----$----$ Author @nthanfp Modified by 🤑 @mohsanjid 🤑 $----$---$  \n\n";
-echo " Subscribe my Youtube channel $ PhotoLooz $ for more videos--😍
- \n\n";
+echo "  $-----$----$ Author credits : nthanfp $----$---$  \n";
+echo "  $-----$----$ Modified by mohsanjid $----$---$  \n";
+echo "  $-----$----$ Remodified by gvoze32 $----$---$  \n\n";
+
 echo "[?] Input your instagram username : ";
 $userig    = trim(fgets(STDIN, 1024));
 echo "[?] Input your instagram password : ";
