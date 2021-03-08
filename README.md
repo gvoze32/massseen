@@ -1,37 +1,26 @@
-
-
-
-
-Mass Looker ,it’s a console-based script created for massvoting (mass poll voting) and masslooking stories
+Massseen is Instagram automation tool to view thousands of stories with in minutes without getting action block. 
 
 # Features
- Author credits : nthanfp
- Modified by @mohsanjid Follow on Instagram www.instagram.com/mohsanjid/ and
- Subscribe Youtube Channel for more videos www.youtube.com/c/PhotoLooz
-
-  - Views Stories
-  - Question Answer
-  - Poll Voting
-  - Emoji Slider
+- View Stories
   
 # Uses 
-   - Unlimited real followers
-   - Unlimited real likes
-   - Increasing profile visits
-   - Incredible reach
+- Increasing profile visits and followers
    
 # Installation
 
-MassLooker requires [PHP](https://www.php.net/) 5.6 to run.
+Requires at least PHP version 5.6 to run.
 
-```sh
-Follow These Steps for Installation
-$pkg install php
-$pkg install git
-$pkg install mc
-$ git clone https://github.com/sanjidtk/masslooker
-$ cd masslooker
+```
+$ sudo apt-get install php git mc
+$ git clone https://github.com/gvoze32/massseen
+$ cd massseen
 $ php login.php
 $ php run.php
 ```
 
+# Credits
+Author credits : nthanfp
+
+Modified by mohsanjid
+
+Remodified by gvoze32
