@@ -9,10 +9,10 @@ echo "
  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         🅼🅰🆂🆂 🅻🅾🅾🅺🅴🆁 
 	$---------$--------$
-	1.Mass story views without Action block
-	2.DELETED
-	3.DELETED
-	4.DELETED
+	1. View Stories
+	2. DISABLED
+	3. DISABLED
+	4. DISABLED
 	$---------$--------$
 	
 	\n";

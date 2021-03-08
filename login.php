@@ -6,10 +6,10 @@ echo "
         🅼🅰🆂🆂 🅻🅾🅾🅺🅴🆁 
 	
 	$---------$--------$
-	1.Mass story views without action block
-	2.Reacts to stories
-	3.Auto Poll reactions
-	4.Auto Question Ansewring
+	1. View Stories
+	2. DISABLED
+	3. DISABLED
+	4. DISABLED
 	$---------$--------$
 	
 	\n";
