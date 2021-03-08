@@ -10,9 +10,6 @@ echo "
         🅼🅰🆂🆂 🅻🅾🅾🅺🅴🆁 
 	$---------$--------$
 	1. View Stories
-	2. DISABLED
-	3. DISABLED
-	4. DISABLED
 	$---------$--------$
 	
 	\n";
