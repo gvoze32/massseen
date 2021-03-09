@@ -31,6 +31,6 @@ $ php run.php
 ## Credits
 Author credits : nthanfp
 
-Modified by mohsanjid [(Repository)](https://github.com/sanjidtk/masslooker)
+Modified by mohsanjid ([Repository](https://github.com/sanjidtk/masslooker))
 
 Remodified by gvoze32
