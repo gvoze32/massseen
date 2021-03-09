@@ -91,6 +91,8 @@ if($cookie){
 					$getstory   = proccess(1, $useragent, 'feed/user/'.$listids[$i].'/story/', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5']);
 					$getstory   = json_decode($getstory[1], true);
 					foreach($getstory['reel']['items'] as $storyitem):
+						$sleep_1 = rand(3,8);
+						$sleep_2 = rand(30,50);
 						$reels[count($reels)]	= $storyitem['id']."_".$getstory['reel']['user']['pk'];
 						$stories['id']			= $storyitem['id'];
 						$stories['reels']		= $storyitem['id']."_".$getstory['reel']['user']['pk'];
