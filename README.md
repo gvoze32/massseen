@@ -8,7 +8,7 @@ Massseen is Instagram automation tool to view thousands of stories with in minut
 - Increasing profile visits and followers
 
 ## What's Changed?
-- Disabled features other than view stories
+- Disabled other features except view stories
 - Changed target
 - Changed delay
 - Changed timezone
