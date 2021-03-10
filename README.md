@@ -25,7 +25,7 @@ $ sudo apt-get install php git mc
 $ git clone https://github.com/gvoze32/massseen
 $ cd massseen
 $ php login.php
-$ php run.php
+$ bash start.sh
 ```
 
 ## Credits
