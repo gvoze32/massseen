@@ -25,8 +25,8 @@ if($cookie){
 		$getakunV2	= proccess(1, $useragent, 'users/'.$getakun['user']['pk'].'/info', $cookie);
 		$getakunV2	= json_decode($getakunV2[1], true);
 		echo "[~] Login as @".$getakun['user']['username']." \n";
-		echo "[~] [Media : ".$getakunV2['user']['media_count']."] [Follower : ".$getakunV2['user']['follower_count']."] [Following : ".$getakunV2['user']['following_count']."]\n";
-		echo "[~] Please wait 5 second for loading script\n";
+		echo "[~] [Media : ".$getakunV2['user']['media_count']."] [Followers : ".$getakunV2['user']['follower_count']."] [Following : ".$getakunV2['user']['following_count']."]\n";
+		echo "[~] Please wait...\n";
 		echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(1); } echo "\n\n";
 		do {
 			$targets	= file_get_contents('./data/'.$targetFile);
@@ -53,7 +53,7 @@ if($cookie){
 				$targetid	= json_decode(request(1, $useragent, 'users/'.$target.'/usernameinfo/', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5'])[1], 1)['user']['pk'];
 				$gettarget	= proccess(1, $useragent, 'users/'.$targetid.'/info', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5']);
 				$gettarget	= json_decode($gettarget[1], true);
-				echo "[~] [Media : ".$gettarget['user']['media_count']."] [Follower : ".$gettarget['user']['follower_count']."] [Following : ".$gettarget['user']['following_count']."]\n";
+				echo "[~] [Media : ".$gettarget['user']['media_count']."] [Followers : ".$gettarget['user']['follower_count']."] [Following : ".$gettarget['user']['following_count']."]\n";
 				$jumlah		= $countTarget;
 				if(!is_numeric($jumlah)){
 					$limit = 1;
@@ -91,8 +91,8 @@ if($cookie){
 					$getstory   = proccess(1, $useragent, 'feed/user/'.$listids[$i].'/story/', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5']);
 					$getstory   = json_decode($getstory[1], true);
 					foreach($getstory['reel']['items'] as $storyitem):
-						$sleep_1 = rand(3,8);
-						$sleep_2 = rand(30,50);
+						$sleep_1 = rand(1,10);
+						$sleep_2 = rand(15,45);
 						$reels[count($reels)]	= $storyitem['id']."_".$getstory['reel']['user']['pk'];
 						$stories['id']			= $storyitem['id'];
 						$stories['reels']		= $storyitem['id']."_".$getstory['reel']['user']['pk'];
@@ -110,19 +110,18 @@ if($cookie){
 							sleep($sleep_1);
 						}
 					endforeach;
-					echo "[~] ".date('d-m-Y H:i:s')." - Sleep for ".$sleep_2." second to bypass instagram limit\n"; sleep($sleep_2);
+					echo "[~] ".date('d-m-Y H:i:s')." - Sleep for ".$sleep_2." seconds to bypass Instagram limit\n"; sleep($sleep_2);
 				endfor;
 				echo "[~] ".count($reels)." story from ".$target." collected\n";
 				echo "[~] ".count($reels_suc)." story from ".$target." marked as seen\n";
 				echo "[~] ".count($today)." story reacted today\n";
-				echo "[~] ".date('d-m-Y H:i:s')." - Sleep for 30 second to bypass instagram limit\n";
+				echo "[~] ".date('d-m-Y H:i:s')." - Sleep for 30 seconds to bypass Instagram limit\n";
 				echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(6); } echo "\n\n";
 			}
 			if(count($today) > '1900'){
 				echo "[~] ".count($today)." story reacted today\n";
-				echo "[~] Limit instagram api 2000 seen/day\n";
-				echo "[~] Sleep for 20 hours to bypass instagram limit\n";
-				sleep(72000);
+				echo "[~] Sleep for 1 hours to bypass Instagram limit\n";
+				sleep(3600);
 				echo "[~] End sleep...\n\n";
 			}
 		} while($loop == true);

@@ -14,7 +14,7 @@ $countTarget    = '100'; //Ambil jumlah akun per target
 //$sleep_2        = '30'; //Jeda per view story 1 akun user
 //SAMPAI SINI AJA
 
-$answerFile		= 'storyAnswer.txt'; // FIle komentar mu
+//$answerFile		= 'storyAnswer.txt'; // FIle komentar mu
 $saveFile 		= 'logData.txt'; // File log
 $cookieFile 	= 'cookieData.txt'; // File cookie
 $targetFile 	= 'targetData.txt'; // File target
