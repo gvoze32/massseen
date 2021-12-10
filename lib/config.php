@@ -9,12 +9,12 @@ Jika akun terkena feedback_required tenang, tinggal tunggu 24 jam ntar pulih lag
 */
 
 //UBAH BAGIAN INI
-$countTarget    = '100'; //Ambil jumlah akun per target
+$countTarget  = '200'; //Ambil jumlah akun per target
 //SAMPAI SINI AJA
 
 $saveFile 		= 'logData.txt'; // File log
 $cookieFile 	= 'cookieData.txt'; // File cookie
 $targetFile 	= 'targetData.txt'; // File target
-$date 			= date("Y-m-d");
-$time 			= date("H:i:s");
+$date 			  = date("Y-m-d");
+$time 		  	= date("H:i:s");
 ?>
