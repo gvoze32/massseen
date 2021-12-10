@@ -1,5 +1,5 @@
 # Massseen
-Massseen is Instagram automation tool to view thousands of stories with in minutes without getting action block. 
+Massseen is Instagram automation tool to view thousands of stories within minutes without getting action block. 
 
 ## Features
 - View Stories
