@@ -19,7 +19,7 @@ Massseen is Instagram automation tool to view thousands of stories within minute
    
 ## Installation
 
-Requires at least PHP version 5.6 to run.
+Requires at least PHP 5.6+ to run.
 
 Turn off Two-factor authentication (2FA).
 
