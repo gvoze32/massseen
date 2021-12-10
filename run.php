@@ -28,7 +28,7 @@ if($cookie){
 		echo "[~] [Media : ".$getakunV2['user']['media_count']."] [Followers : ".$getakunV2['user']['follower_count']."] [Following : ".$getakunV2['user']['following_count']."]\n";
 		echo "[~] Please wait...\n";
 		echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(1); } echo "\n\n";
-		new_run = 0;
+		$new_run = 0;
 		settype($new_run, "integer");
 		do {
 			$targets	= file_get_contents('./data/'.$targetFile);
