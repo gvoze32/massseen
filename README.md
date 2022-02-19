@@ -9,10 +9,10 @@ Massseen is Instagram automation tool to view thousands of stories within minute
 
 ## What's Changed?
 - Disable other features except view stories
-- Change target
-- Change delay
-- Change timezone
-- Change from static to dynamic random delay method
+- Target
+- Delay
+- Timezone
+- Static to dynamic random delay method
 - Add auto relaunch feature when the program stopped
 - Increase sleep to bypass limit
 - Increase target count
