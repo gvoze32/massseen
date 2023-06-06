@@ -14,9 +14,9 @@ echo "[-] =========== Made by nthanfp =========== [-]\n";
 echo "[-] ======== Updated by @theaxe.id, @deoffuscated ======== [-]\n\n";
 echo "[-] =========== Modified by gvoze32, mohsanjid =========== [-]\n";
 
-echo "[?] Input your instagram username : ";
+echo "[?] Input your Instagram username : ";
 $userig    = trim(fgets(STDIN, 1024));
-echo "[?] Input your instagram password : ";
+echo "[?] Input your Instagram password : ";
 $passig    = trim(fgets(STDIN, 1024));
 //
 $useragent = generate_useragent();
@@ -96,7 +96,7 @@ if($ext->status == 'ok'){
 	        }
 	    }
     } else {
-    	echo "[!] Failed sent verification code ".$cekpoint." - ".var_dump($_SESSION)."\n";
+    	echo "[!] Failed sending verification code ".$cekpoint." - ".var_dump($_SESSION)."\n";
     	echo "[!] Exit...\n";
     	exit();
     }

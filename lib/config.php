@@ -8,6 +8,7 @@ error_reporting(0);
 $countTarget    = '200'; //Ambil jumlah akun per target
 $sleep_1        = rand(90,120); //Jeda per view story
 $sleep_2        = rand(90,120); //Jeda per view story 1 akun user
+$new_run        = 0;
 // SAMPAI SINI 
 
 $answerFile		= 'storyAnswer.txt'; 
