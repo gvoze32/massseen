@@ -6,44 +6,44 @@ $useragent 		= $cookieData[1]; // Useragent Instagram
 $loop			= true;
 //feed/user/{$userId}/story/
 echo "
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-	$---------$--------$
-	     View Stories
-	$---------$--------$
-	
-	\n";
-echo "  $-----$----$ Author credits : nthanfp $----$---$  \n";
-echo "  $-----$----$ Modified by mohsanjid $----$---$  \n";
-echo "  $-----$----$ Remodified by gvoze32 $----$---$  \n\n";
+ _____ _                   _                       
+/  ___| |                 | |                      
+\ `--.| |_ ___  _ __ _   _| |     ___   ___  _ __  
+ `--. \ __/ _ \| '__| | | | |    / _ \ / _ \| '_ \ 
+/\__/ / || (_) | |  | |_| | |___| (_) | (_) | |_) |
+\____/ \__\___/|_|   \__, \_____/\___/ \___/| .__/ 
+                      __/ |                 | |    
+                     |___/                  |_|    \n";
+echo "[-] ============ Auto Views Story ============ [-]\n";
+echo "[-] =========== Made by nthanfp =========== [-]\n";
+echo "[-] ======== Updated by @theaxe.id, @deoffuscated ======== [-]\n\n";
+echo "[-] =========== Modified by gvoze32, mohsanjid =========== [-]\n";
 
 if($cookie){
-	$getakun	= proccess(1, $useragent, 'accounts/current_user/', $cookie);
-	$getakun	= json_decode($getakun[1], true);
-	if($getakun['status'] == 'ok'){
+	$getaccount	= proccess(1, $useragent, 'accounts/current_user/', $cookie);
+	$getaccount	= json_decode($getaccount[1], true);
+	if($getaccount['status'] == 'ok'){
 		//LOSS
-		$getakunV2	= proccess(1, $useragent, 'users/'.$getakun['user']['pk'].'/info', $cookie);
-		$getakunV2	= json_decode($getakunV2[1], true);
-		echo "[~] Login as @".$getakun['user']['username']." \n";
-		echo "[~] [Media : ".$getakunV2['user']['media_count']."] [Followers : ".$getakunV2['user']['follower_count']."] [Following : ".$getakunV2['user']['following_count']."]\n";
-		echo "[~] Please wait...\n";
-		echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(1); } echo "\n\n";
-		$new_run = 0;
-		settype($new_run, "integer");
+		$getaccountV2	= proccess(1, $useragent, 'users/'.$getaccount['user']['pk'].'/info', $cookie);
+		$getaccountV2	= json_decode($getaccountV2[1], true);
+		echo "[~] Login as @".$getaccount['user']['username']." \n";
+		echo "[~] [Media : ".$getaccountV2['user']['media_count']."] [Follower : ".$getaccountV2['user']['follower_count']."] [Following : ".$getaccountV2['user']['following_count']."]\n";
+		echo "[~] Please wait 5 second for loading script\n";
+		echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(5); } echo "\n\n";
 		do {
 			$targets	= file_get_contents('./data/'.$targetFile);
 			$targets 	= explode("\n", str_replace("\r", "", $targets));
 			$targets 	= array($targets)[0];
 			foreach($targets as $target){
-				$komens		= file_get_contents('./data/'.$answerFile);
-				$komen		= explode("\n", str_replace("\r", "", $komens));
-				$komen		= array($komen)[0];
+				$commens		= file_get_contents('./data/'.$answerFile);
+				$commen		= explode("\n", str_replace("\r", "", $commens));
+				$commen		= array($commen)[0];
 				//
 				$todays		= file_get_contents('./data/daily/'.date('d-m-Y').'.txt');
 				$today		= explode("\n", str_replace("\r", "", $todays));
 				$today		= array($today)[0];
 				//
-				//$proxy		= file_get_contents('https://veonpanel.com/api/panel/proxy?key=MEMEF');
+				//$proxy		= file_get_contents('https://proxies-provider.com');
 				//$proxy		= json_decode($proxy, true);
 				//$prox['ip']			= $proxy['data']['proxy'];
 				$prox['ip']			= 0;
@@ -55,7 +55,7 @@ if($cookie){
 				$targetid	= json_decode(request(1, $useragent, 'users/'.$target.'/usernameinfo/', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5'])[1], 1)['user']['pk'];
 				$gettarget	= proccess(1, $useragent, 'users/'.$targetid.'/info', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5']);
 				$gettarget	= json_decode($gettarget[1], true);
-				echo "[~] [Media : ".$gettarget['user']['media_count']."] [Followers : ".$gettarget['user']['follower_count']."] [Following : ".$gettarget['user']['following_count']."]\n";
+				echo "[~] [Media : ".$gettarget['user']['media_count']."] [Follower : ".$gettarget['user']['follower_count']."] [Following : ".$gettarget['user']['following_count']."]\n";
 				$jumlah		= $countTarget;
 				if(!is_numeric($jumlah)){
 					$limit = 1;
@@ -93,8 +93,6 @@ if($cookie){
 					$getstory   = proccess(1, $useragent, 'feed/user/'.$listids[$i].'/story/', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5']);
 					$getstory   = json_decode($getstory[1], true);
 					foreach($getstory['reel']['items'] as $storyitem):
-						$sleep_1 = rand(7,17);
-						$sleep_2 = rand(25,35);
 						$reels[count($reels)]	= $storyitem['id']."_".$getstory['reel']['user']['pk'];
 						$stories['id']			= $storyitem['id'];
 						$stories['reels']		= $storyitem['id']."_".$getstory['reel']['user']['pk'];
@@ -109,28 +107,27 @@ if($cookie){
 								saveData('./data/storyData.txt', $stories['reels']);
 								saveData('./data/daily/'.date('d-m-Y').'.txt', $stories['reels']);
 							}
-							$new_run++;
 							sleep($sleep_1);
 						}
 					endforeach;
-					echo "[~] ".date('d-m-Y H:i:s')." - Sleep for ".$sleep_2." seconds to bypass Instagram limit== [$new_run] \n"; sleep($sleep_2);
+					echo "[~] ".date('d-m-Y H:i:s')." - Sleep for ".$sleep_2." second to bypass instagram limit\n"; sleep($sleep_2);
 				endfor;
 				echo "[~] ".count($reels)." story from ".$target." collected\n";
 				echo "[~] ".count($reels_suc)." story from ".$target." marked as seen\n";
 				echo "[~] ".count($today)." story reacted today\n";
-				echo "[~] ".date('d-m-Y H:i:s')." - Sleep for 150 seconds to bypass Instagram limit\n";
-				echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(30); } echo "\n\n";
+				echo "[~] ".date('d-m-Y H:i:s')." - Sleep for 30 second to bypass instagram limit\n";
+				echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(6); } echo "\n\n";
 			}
-			if(count($today) > '19000'){
+			if(count($today) > '250000') {
 				echo "[~] ".count($today)." story reacted today\n";
 				echo "[~] Limit instagram api 2000 seen/day\n";
-				echo "[~] Sleep for 20 hours to bypass Instagram limit\n";
-				sleep(72000);
+				echo "[~] Sleep for 20 hours to bypass instagram limit\n";
+				sleep(72);
 				echo "[~] End sleep...\n\n";
 			}
 		} while($loop == true);
 	} else {
-		echo "[!] Error : ".json_encode($getakun)."\n";
+		echo "[!] Error : ".json_encode($getaccount)."\n";
 	}
 } else {
 	echo "[!] Please login\n";

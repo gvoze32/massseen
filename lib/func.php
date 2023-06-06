@@ -1,5 +1,4 @@
 <?php
-// function config
 function basic_cURL($url, $useragent = 0, $cookie = 0, $data = 0, $httpheader = array(), $proxy = 0, $userpwd = 0, $is_socks5 = 0){
     $url = $url;
     $ch  = curl_init($url);
@@ -77,19 +76,19 @@ function ip(){
      return $ipaddress; 
 }
 
-function rupiah($angka){
-	$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+function rupiah($numbers){
+	$hasil_rupiah = "Rp " . number_format($numbers,2,',','.');
 	return $hasil_rupiah;
  
 }
 
 function rand_str($type, $length){
 	$characters = array();
-    $characters['angka']			= '0123456789';
-    $characters['kapital']			= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $characters['huruf']			= 'abcdefghijklmnopqrstuvwxyz';
-    $characters['kapital_angka']	= '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $characters['huruf_angka']		= '0123456789abcdefghijklmnopqrstuvwxyz';
+    $characters['numbers']			= '0123456789';
+    $characters['capital']			= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $characters['small']			= 'abcdefghijklmnopqrstuvwxyz';
+    $characters['capital_numbers']	= '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $characters['small_numbers']		= '0123456789abcdefghijklmnopqrstuvwxyz';
     $characters['all']				= '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength				= strlen($characters[$type]);
     $randomString					= '';

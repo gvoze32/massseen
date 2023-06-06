@@ -1,20 +1,19 @@
 <?php
 include('func.php');
 include('igfunc.php');
-date_default_timezone_set('Asia/Hong_Kong');
+date_default_timezone_set('Asia/Jakarta');
 error_reporting(0);
-/*
-Jika akun terkena feedback_required tenang, tinggal tunggu 24 jam ntar pulih lagi
-@theaxe.id
-*/
 
-//UBAH BAGIAN INI
-$countTarget  = '200'; //Ambil jumlah akun per target
-//SAMPAI SINI AJA
+// EDIT DARI SINI
+$countTarget    = '200'; //Ambil jumlah akun per target
+$sleep_1        = rand(90,120); //Jeda per view story
+$sleep_2        = rand(90,120); //Jeda per view story 1 akun user
+// SAMPAI SINI 
 
-$saveFile 		= 'logData.txt'; // File log
-$cookieFile 	= 'cookieData.txt'; // File cookie
+$answerFile		= 'storyAnswer.txt'; 
+$saveFile 		= 'logData.txt'; 
+$cookieFile 	= 'cookieData.txt'; 
 $targetFile 	= 'targetData.txt'; // File target
-$date 			  = date("Y-m-d");
-$time 		  	= date("H:i:s");
+$date 			= date("Y-m-d");
+$time 			= date("H:i:s");
 ?>

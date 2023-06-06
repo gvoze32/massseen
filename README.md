@@ -1,13 +1,17 @@
 # Massseen
-Massseen is Instagram automation tool to view thousands of stories within minutes without getting action block. 
+
+Massseen is Instagram automation tool to view thousands of stories within minutes without getting action block.
 
 ## Features
+
 - View Stories
-  
-## Uses 
+
+## Uses
+
 - Increase profile visits, likes and followers
 
 ## What's Changed?
+
 - Disable other features except view stories
 - Target
 - Delay
@@ -16,7 +20,7 @@ Massseen is Instagram automation tool to view thousands of stories within minute
 - Add auto relaunch feature when the program stopped
 - Increase sleep to bypass limit
 - Increase target count
-   
+
 ## Installation
 
 Requires at least PHP 5.6+ to run.
@@ -32,8 +36,7 @@ $ bash start.sh
 ```
 
 ## Credits
-Author credits : nthanfp
 
-Modified by mohsanjid ([Repository](https://github.com/sanjidtk/masslooker))
-
-Remodified by gvoze32
+Made by nthanfp
+Updated by @theaxe.id, @deoffuscated
+Modified by gvoze32, mohsanjid

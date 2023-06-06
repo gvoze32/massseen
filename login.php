@@ -1,21 +1,22 @@
 <?php
 require('lib/config.php');
-echo " 
+echo "
+ _____ _                   _                       
+/  ___| |                 | |                      
+\ `--.| |_ ___  _ __ _   _| |     ___   ___  _ __  
+ `--. \ __/ _ \| '__| | | | |    / _ \ / _ \| '_ \ 
+/\__/ / || (_) | |  | |_| | |___| (_) | (_) | |_) |
+\____/ \__\___/|_|   \__, \_____/\___/ \___/| .__/ 
+                      __/ |                 | |    
+                     |___/                  |_|    \n";
+echo "[-] ============ Auto Views Story ============ [-]\n";
+echo "[-] =========== Made by nthanfp =========== [-]\n";
+echo "[-] ======== Updated by @theaxe.id, @deoffuscated ======== [-]\n\n";
+echo "[-] =========== Modified by gvoze32, mohsanjid =========== [-]\n";
 
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-	$---------$--------$
-	    View Stories
-	$---------$--------$
-	
-	\n";
-echo "  $-----$----$ Author credits : nthanfp $----$---$  \n";
-echo "  $-----$----$ Modified by mohsanjid $----$---$  \n";
-echo "  $-----$----$ Remodified by gvoze32 $----$---$  \n\n";
-
-echo "[?] Input your Instagram username : ";
+echo "[?] Input your instagram username : ";
 $userig    = trim(fgets(STDIN, 1024));
-echo "[?] Input your Instagram password : ";
+echo "[?] Input your instagram password : ";
 $passig    = trim(fgets(STDIN, 1024));
 //
 $useragent = generate_useragent();
@@ -50,11 +51,11 @@ if($ext->status == 'ok'){
     echo "[!] ==============================\n\n";
     sleep(2);
     echo "[1] Phone number\n[2] Email\n[?] Enter number verification method : ";
-    $verifikasi				    = trim(fgets(STDIN, 1024));
-    if($verifikasi == 1){
-    	$verifikasi = 0;
-    } elseif($verifikasi == 2){
-    	$verifikasi = 1;
+    $verification				    = trim(fgets(STDIN, 1024));
+    if($verification == 1){
+    	$verification = 0;
+    } elseif($verification == 2){
+    	$verification = 1;
     } else {
     	echo "[+] Invalid input\n";
     	echo "[+] Exit...\n";
@@ -65,7 +66,7 @@ if($ext->status == 'ok'){
     $challenge_ua       		= $_SESSION['c_ua'];
     $challenge_cookie   		= $_SESSION['c_cookie'];
     $challenge_pw       		= $_SESSION['c_password'];
-    $data               		= 'choice='.$verifikasi;
+    $data               		= 'choice='.$verification;
     $cekpoint           		= cekpoint($challenge_url, $data, $challenge_csrf, $challenge_cookie, $challenge_ua);
     if(strpos($cekpoint, 'status": "ok"') !== false){
     	echo "[+] Verification code has been sent\n";
@@ -95,7 +96,7 @@ if($ext->status == 'ok'){
 	        }
 	    }
     } else {
-    	echo "[!] Failed sending verification code ".$cekpoint." - ".var_dump($_SESSION)."\n";
+    	echo "[!] Failed sent verification code ".$cekpoint." - ".var_dump($_SESSION)."\n";
     	echo "[!] Exit...\n";
     	exit();
     }
