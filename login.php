@@ -11,8 +11,8 @@ echo "
                      |___/                  |_|    \n";
 echo "[-] ============ Auto Views Story ============ [-]\n";
 echo "[-] =========== Made by nthanfp =========== [-]\n";
-echo "[-] ======== Updated by @theaxe.id, @deoffuscated ======== [-]\n\n";
-echo "[-] =========== Modified by gvoze32, mohsanjid =========== [-]\n";
+echo "[-] ======== Updated by @theaxe.id, @deoffuscated ======== [-]\n";
+echo "[-] =========== Modified by gvoze32, mohsanjid =========== [-]\n\n";
 
 echo "[?] Input your Instagram username : ";
 $userig    = trim(fgets(STDIN, 1024));

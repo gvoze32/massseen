@@ -16,8 +16,8 @@ echo "
                      |___/                  |_|    \n";
 echo "[-] ============ Auto Views Story ============ [-]\n";
 echo "[-] =========== Made by nthanfp =========== [-]\n";
-echo "[-] ======== Updated by @theaxe.id, @deoffuscated ======== [-]\n\n";
-echo "[-] =========== Modified by gvoze32, mohsanjid =========== [-]\n";
+echo "[-] ======== Updated by @theaxe.id, @deoffuscated ======== [-]\n";
+echo "[-] =========== Modified by gvoze32, mohsanjid =========== [-]\n\n";
 
 if($cookie){
 	$getaccount	= proccess(1, $useragent, 'accounts/current_user/', $cookie);
