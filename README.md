@@ -38,5 +38,7 @@ $ bash start.sh
 ## Credits
 
 Made by nthanfp
+
 Updated by @theaxe.id, @deoffuscated
+
 Modified by gvoze32, mohsanjid
